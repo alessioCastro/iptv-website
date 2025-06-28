@@ -1,4 +1,4 @@
-fetch('./json/part1.json')
+fetch('https://alessiocastro.github.io/iptv-website/json/part1.json')
     .then(response => {
         response.json();
     })

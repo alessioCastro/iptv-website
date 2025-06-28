@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/index.css" />
+  <title>Home</title>
+</head>
+
+<body>
+  <main class="centered-content">
+    <button id="signup-button" onclick="openModal(0)">Sign Up</button>
+    
+    <button id="login-button" onclick="openModal(1)">Login</button>
+    
+    <!-- Modal de Sign Up -->
+    <div class="modal sign-up" hidden>
+      <div class="modal-content">
+        <span class="close-button" onclick="closeModal(0)">&times;</span>
+        <h2>Create Account</h2>
+        <div id="sign-up-message" class="message"></div>
+        <form id="sign-up-form">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+          
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+          
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+    </div>
+    
+    <!-- Modal de Login -->
+    <div class="modal login" hidden>
+      <div class="modal-content">
+        <span class="close-button" onclick="closeModal(1)">&times;</span>
+        <h2>Login Account</h2>
+        <div id="login-message" class="message"></div>
+        <form id="login-form">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+          
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+          
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  
+  <script src="js/index-buttons.js"></script>
+  <script src="js/forms-handler.js" type="module"></script>
+</body>
+
+</html>
